@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ember Coffee Roasters</title>
+<meta name="description" content="Small-batch coffee, roasted slow and shipped fresh.">
+<style>
+  :root {
+    --bg: #faf6f1;
+    --ink: #2a1f1a;
+    --muted: #7a6a5f;
+    --ember: #d9531e;
+    --ember-dark: #b8400f;
+    --card: #ffffff;
+    --line: #eadfd4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  nav { padding: 28px 0; }
+  .logo { font-weight: 700; letter-spacing: .02em; display: flex; align-items: center; gap: 10px; }
+  .logo span { width: 12px; height: 12px; border-radius: 50%; background: var(--ember); box-shadow: 0 0 0 4px #d9531e22; }
+  .hero { padding: 72px 0 56px; text-align: center; }
+  .eyebrow { color: var(--ember); font-weight: 600; font-size: .85rem; letter-spacing: .14em; text-transform: uppercase; }
+  h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1.08; letter-spacing: -.03em; margin: 16px auto 20px; max-width: 14ch; }
+  .hero p { color: var(--muted); font-size: 1.15rem; max-width: 52ch; margin: 0 auto; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; padding: 24px 0 72px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 28px;
+    transition: transform .2s, box-shadow .2s;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px -16px #2a1f1a33; }
+  .swatch { height: 120px; border-radius: 14px; margin-bottom: 22px; }
+  .s1 { background: linear-gradient(135deg, #e8a35c, #b8672b); }
+  .s2 { background: linear-gradient(135deg, #8a4a2b, #4a2518); }
+  .s3 { background: linear-gradient(135deg, #3b2a22, #14100d); }
+  .tag { font-size: .75rem; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; }
+  .card h3 { font-size: 1.35rem; margin: 6px 0 8px; }
+  .card p { color: var(--muted); font-size: .95rem; }
+  .price { margin-top: 18px; font-weight: 700; font-size: 1.1rem; }
+  .price small { color: var(--muted); font-weight: 400; }
+  .cta { text-align: center; padding: 64px 24px 80px; background: var(--ink); color: #fff; }
+  .cta h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); letter-spacing: -.02em; margin-bottom: 10px; }
+  .cta p { color: #cbbcae; margin-bottom: 28px; }
+  .btn {
+    display: inline-block; background: #cc5500; color: #fff; text-decoration: none; font-weight: 600;
+    padding: 15px 34px; border-radius: 999px; transition: background .2s, transform .2s;
+  }
+  .btn:hover { background: #a84400; transform: translateY(-2px); }
+  footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 24px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <nav><div class="logo"><span></span>Ember Coffee Roasters</div></nav>
+
+    <header class="hero">
+      <div class="eyebrow">Small-batch roasters</div>
+      <h1>Roasted in small batches in Bengaluru</h1>
+      <p>We source single-origin beans from growers we know by name, roast them in small batches, and ship within days, so every cup tastes the way it should.</p>
+    </header>
+
+    <section class="cards" aria-label="Our coffees">
+      <article class="card">
+        <div class="swatch s1"></div>
+        <div class="tag">Light roast · Ethiopia</div>
+        <h3>Sunrise Yirgacheffe</h3>
+        <p>Bright and floral with notes of jasmine, bergamot and ripe peach.</p>
+        <div class="price">$18 <small>/ 250g</small></div>
+      </article>
+      <article class="card">
+        <div class="swatch s2"></div>
+        <div class="tag">Medium roast · Colombia</div>
+        <h3>Hearth Huila</h3>
+        <p>Smooth and balanced, with caramel sweetness and a milk chocolate finish.</p>
+        <div class="price">$16 <small>/ 250g</small></div>
+      </article>
+      <article class="card">
+        <div class="swatch s3"></div>
+        <div class="tag">Dark roast · Blend</div>
+        <h3>Midnight Ember</h3>
+        <p>Bold and rich, with dark cocoa, toasted almond and a long smoky finish.</p>
+        <div class="price">$15 <small>/ 250g</small></div>
+      </article>
+    </section>
+  </div>
+
+  <section class="cta">
+    <h2>Let's talk coffee.</h2>
+    <p>Wholesale, subscriptions or just a question, we'd love to hear from you.</p>
+    <a class="btn" href="mailto:hello@embercoffee.example">Contact us</a>
+  </section>
+
+  <footer>© 2026 Ember Coffee Roasters</footer>
+</body>
+</html>

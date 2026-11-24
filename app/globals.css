@@ -1,0 +1,82 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/* Ember design system: "Night Roast". See the Design section in CLAUDE.md. */
+@theme {
+  --color-bg: #1a1411;
+  --color-text: #f3ebe0;
+  --color-primary: #e0541b;
+  --color-accent: #f2b66d;
+  --color-muted: #a39384;
+
+  /* One small radius everywhere, including shadcn components. */
+  --radius-ui: 6px;
+  --radius-xs: 6px;
+  --radius-sm: 6px;
+  --radius-md: 6px;
+  --radius-lg: 6px;
+  --radius-xl: 6px;
+  --radius-2xl: 6px;
+  --radius-3xl: 6px;
+  --radius-4xl: 6px;
+}
+
+/* shadcn/ui semantic names, mapped onto the palette so its components match. */
+@theme {
+  --color-background: var(--color-bg);
+  --color-foreground: var(--color-text);
+  --color-card: var(--color-bg);
+  --color-card-foreground: var(--color-text);
+  --color-popover: var(--color-bg);
+  --color-popover-foreground: var(--color-text);
+  --color-primary-foreground: var(--color-bg);
+  --color-secondary: var(--color-bg);
+  --color-secondary-foreground: var(--color-text);
+  --color-muted-foreground: var(--color-muted);
+  --color-accent-foreground: var(--color-bg);
+  --color-destructive: var(--color-primary);
+  --color-border: color-mix(in oklab, var(--color-muted) 30%, transparent);
+  --color-input: color-mix(in oklab, var(--color-muted) 30%, transparent);
+  --color-ring: var(--color-muted);
+}
+
+@theme inline {
+  --font-sans: var(--font-body), system-ui, sans-serif;
+  --font-serif: var(--font-display), Georgia, serif;
+  --font-heading: var(--font-display), Georgia, serif;
+}
+
+/* Vertical padding every section uses, so the gap between sections is the same. */
+@utility section-y {
+  padding-block: 3.5rem;
+
+  @media (min-width: 64rem) {
+    padding-block: 5rem;
+  }
+}
+
+/* Scroll reveal: 400ms fade and 16px slide. Skipped for reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity 400ms ease-out,
+      transform 400ms ease-out;
+  }
+
+  [data-reveal][data-visible="true"] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    line-height: 1.6;
+  }
+}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
+  <rect width="400" height="500" fill="#f3ebe0"/>
+  <rect x="100" y="80" width="200" height="340" rx="6" fill="#1a1411"/>
+  <rect x="100" y="80" width="200" height="36" rx="6" fill="#a39384"/>
+  <rect x="122" y="190" width="156" height="130" rx="6" fill="#f3ebe0"/>
+  <g font-family="Georgia, 'Times New Roman', serif" text-anchor="middle" fill="#1a1411">
+    <text x="200" y="240" font-size="22">Monsoon</text>
+    <text x="200" y="266" font-size="22">Malabar</text>
+    <text x="200" y="300" font-size="9" letter-spacing="2">ROASTED IN BENGALURU</text>
+  </g>
+</svg>
